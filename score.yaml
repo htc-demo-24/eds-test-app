@@ -14,8 +14,15 @@ containers:
     image: # Set by pipeline
     variables:
       Hello: World
+      Thing: Test thing
+      POSTGRES_HOST: ${resources.db.host}
+      POSTGRES_PASSWORD: ${resources.db.password}
+      POSTGRES_PORT: ${resources.db.port}
+      POSTGRES_USER: ${resources.db.username}
 
 resources:
+  db:
+    type: postgresql
   dns: # We need a DNS record to point to the service 
     type: dns
   route:
