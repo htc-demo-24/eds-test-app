@@ -22,7 +22,7 @@ containers:
 
 resources:
   db:
-    type: postgresql
+    type: postgres
   dns: # We need a DNS record to point to the service 
     type: dns
   route:
